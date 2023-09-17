@@ -1,0 +1,910 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: f2;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #000;
+}
+
+@font-face {
+    font-family: f1;
+    src: url(Formula1-Bold.otf);
+}
+
+@font-face {
+    font-family: f2;
+    src: url(Formula1-Regular.otf);
+}
+
+@font-face {
+    font-family: f3;
+    src: url(Formula1-Wide.otf);
+}
+
+@font-face {
+    font-family: Helena;
+    src: url(Helena\ Display.otf);
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+.main>#nav {
+    height: 100px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 50px;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    font-weight: 300;
+}
+
+#nav img {
+    height: 30px;
+    object-fit: cover;
+}
+
+#nav a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#nav .active {
+    /* color: red; */
+    transform: scale(1.05);
+    font-weight: 900;
+}
+
+#nav a:hover {
+    color: red;
+    transform: scale(1.05);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+#page1>video {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+#page1 .introText {
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding-top: 37.5%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+#page1 .introText h2 {
+    font-size: 5vw;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    font-family: f2;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#page1 .introText h2::before {
+    content: "Welcome to the F1 World";
+    position: absolute;
+    top: 2px;
+    -webkit-text-stroke: 10px rgb(255, 0, 0);
+    z-index: -1;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 8vw;
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+    text-transform: uppercase;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    margin-right: 25px;
+    font-family: "f1";
+    color: transparent;
+    -webkit-text-stroke: 2px red;
+    transition: all ease-in-out 0.5;
+}
+
+#scroller h4:hover {
+    color: red;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+#page2>h2 {
+    font-weight: 100;
+    margin-bottom: 3vw;
+    width: 65%;
+    padding-top: 15vw;
+    line-height: 1.4;
+    font-size: 1.25vw;
+}
+
+#page2>h1 {
+    width: 80%;
+    line-height: 1.7;
+    font-weight: 400;
+    font-size: 2vw;
+    color: #fff;
+    padding-bottom: 5vw;
+}
+
+
+
+/* PAGE-3 */
+
+.main #page3 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3vw;
+}
+
+
+#page3>.left {
+    width: 50%;
+    height: 90vh;
+    padding: 7.5%;
+}
+
+.left>h1 {
+    font-size: 2vw;
+    margin: 4vw 0;
+    padding: 1vh;
+    position: relative;
+    cursor: pointer;
+    /* Add this to make the cursor change on hover */
+}
+
+.left>h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 0.25vh;
+    background-color: red;
+    border-radius: 50px;
+    z-index: -1;
+    -webkit-transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.left>h1:hover::after {
+    width: 100%;
+}
+
+.left>h2 {
+    font-size: 2vw;
+    font-weight: 500;
+    margin: 1vw 0;
+}
+
+.left>h2>span {
+    font-weight: 700;
+    color: red;
+}
+
+
+.left>p {
+    font-size: 1.25vw;
+    color: #dadada;
+}
+
+.left>button {
+    padding: 1vw 2vw;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: 3vw 0;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
+#page3>.right {
+    width: 60%;
+    height: 70vh;
+    position: relative;
+    -webkit-transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.right>.img1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    /* padding: 10px; */
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    -webkit-transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.right>.img2 {
+    width: 0%;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    object-fit: cover;
+    padding: 10px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.right:hover .img1 {
+    width: 0%;
+}
+
+.right:hover .img2 {
+    width: 100%;
+}
+
+/* PAGE-4 */
+
+.main #page4 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3vw;
+}
+
+
+#page4>.right {
+    width: 50%;
+    height: 90vh;
+    padding: 7.5%;
+}
+
+.right>h1 {
+    font-size: 2vw;
+    margin: 4vw 0;
+    padding: 1vh;
+    position: relative;
+    cursor: pointer;
+    /* Add this to make the cursor change on hover */
+}
+
+.right>h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 0.25vh;
+    background-color: red;
+    border-radius: 50px;
+    z-index: -1;
+    -webkit-transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.right>h1:hover::after {
+    width: 100%;
+}
+
+.right>h2 {
+    font-size: 2vw;
+    font-weight: 500;
+    margin: 1vw 0;
+}
+
+.right>h2>span {
+    font-weight: 700;
+    color: red;
+}
+
+
+.right>p {
+    font-size: 1.25vw;
+    color: #dadada;
+}
+
+.right>button {
+    padding: 1vw 2vw;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: 3vw 0;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
+#page4>.left {
+    width: 60%;
+    height: 90vh;
+    position: relative;
+    -webkit-transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.left>.img1 {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    padding: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    -webkit-transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.left>.img2 {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    object-fit: cover;
+    padding: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.left:hover .img1 {
+    width: 100%;
+}
+
+.left:hover .img2 {
+    width: 0%;
+}
+
+.page4-5 {
+    width: 65%;
+    border: 1px solid red;
+    position: relative;
+    left: 50%;
+}
+
+.page5 {
+    margin: 50px;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.page5 .raceSchedule {
+    background-color: #000;
+    width: 100vw;
+    position: relative;
+    height: 75vh;
+    display: flex;
+}
+
+.raceSchedule .imgContainer {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+
+}
+
+.raceSchedule img {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    filter: grayscale(1) brightness(.3) contrast(1.5);
+
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.raceSchedule img:hover {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    filter: grayscale(0);
+}
+
+.raceSchedule .whitebg {
+    height: 100%;
+    width: 20%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.raceSchedule h1 {
+    position: relative;
+    left: 3.5%;
+    rotate: 270deg;
+    font-size: 4vw;
+    font-weight: 900;
+    z-index: 999;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    background: url(../assets/contact.jpg);
+    filter: brightness(1.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 5px solid red;
+}
+
+.page5 .nextRace {
+    width: 50vw;
+    height: 30vw;
+    position: relative;
+    bottom: 12%;
+    left: 40%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid #000;
+    filter: drop-shadow(10px 10px 1px #222);
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.4);
+    z-index: -1;
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.nextRace h1 {
+    font-size: 4vw;
+    padding: 2vw;
+    text-align: center;
+
+}
+
+.nextRace h1::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 0%;
+    height: 0.5vh;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 50px;
+    z-index: -1;
+    -webkit-transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.nextRace>h1:hover::after {
+    width: 100%;
+}
+
+.nextRace .details {
+    /* background-color: crimson; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+
+}
+
+.nextRace .details p {
+    width: 100%;
+    font-family: f2;
+    padding: 2vw;
+    position: relative;
+    top: -5%;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.details .date {
+    width: 100%;
+    height: 100%;
+    padding: 2vw;
+    position: relative;
+    top: -15%;
+    left: 10%;
+}
+
+.nextRace .details .date h3 {
+    position: relative;
+    font-weight: 900;
+    font-size: 8vw;
+
+}
+
+.date h3 sup {
+    font-size: 3vw;
+    margin: -10%;
+
+}
+
+.details .date h5 {
+    font-size: 2vw;
+    font-size: 400;
+
+}
+
+.nextRace:hover .overlay {
+    background-color: #00000099;
+}
+
+
+.page5-6 {
+    width: 35%;
+    border: 1px solid red;
+    position: relative;
+}
+
+
+.page6 {
+    margin: 50px;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.page6 .raceHighlights {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+}
+
+.raceHighlights .imgContainer {
+    width: 50%;
+    height: 100%;
+}
+
+.raceHighlights video {
+    rotate: -90deg;
+    width: 100%;
+    height: 150%;
+    position: relative;
+    top: 0;
+    left: -10%;
+    object-fit: cover;
+    margin-bottom: 200px;
+    filter: brightness(.4);
+}
+
+.raceHighlights .textContent {
+    width: 50%;
+    height: 100%;
+    z-index: 99;
+    position: absolute;
+    top: 45%;
+}
+
+.textContent h1 {
+    font-size: 3.5vw;
+    font-weight: 900;
+    position: relative;
+}
+
+.textContent h1::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5vw;
+    left: 0;
+    width: 10%;
+    height: 5px;
+    background-color: #fff;
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+
+}
+
+.textContent h1:hover::after {
+    width: 90%;
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.textContent p {
+    font-weight: 300;
+    font-size: 1.4vw;
+    width: 70%;
+}
+
+.textContent button {
+    padding: 1vw 2vw;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    top: 5%;
+    left: 45%;
+}
+
+.page6 .lastRace {
+    width: 40vw;
+    height: 20vw;
+    position: relative;
+    bottom: 50%;
+    left: 45%;
+    z-index: 13;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid #000;
+    filter: drop-shadow(-10px 10px 0px #dadada);
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.lastRace .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.lastRace .image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.1);
+    z-index: -1;
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.lastRace h1 {
+    font-size: 3vw;
+    padding: 2vw;
+    position: relative;
+    top: -10%;
+}
+
+.lastRace h1::after {
+    content: '';
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 0%;
+    height: 0.5vh;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 50px;
+    z-index: -1;
+    -webkit-transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+    transition: all .4s cubic-bezier(0.51, 0.01, 0, 0.87);
+}
+
+.lastRace>h1:hover::after {
+    width: 100%;
+}
+
+.lastRace .details {
+    /* background-color: crimson; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+
+}
+
+.lastRace .details p {
+    width: 100%;
+    font-family: f2;
+    position: relative;
+    top: 15%;
+    padding: 1.5vw;
+    font-size: 2vw;
+    font-weight: 600;
+
+}
+
+
+.lastRace:hover .overlay {
+    background-color: #00000099;
+}
+
+.page6-hr {
+    width: 65%;
+    border: 1px solid red;
+    position: relative;
+    left: 50%;
+    bottom: 31%;
+}
+
+.page7 {
+    margin-top: 150px;
+    height: 50vh;
+    width: 150vw;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.last {
+    margin-top: 150px;
+    height: 50vh;
+    width: 150vw;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page7-hr {
+    width: 35%;
+    border: 1px solid red;
+    position: relative;
+    left: 50%;
+}
+
+.last {
+    margin-top: 150px;
+    height: 50vh;
+    width: 150vw;
+    /* background-color: #333; */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page7-hr {
+    width: 35%;
+    border: 1px solid red;
+    position: relative;
+    left: 50%;
+}
+
+.last h1 {
+    font-size: 5vw;
+    z-index: 99999999;
+    position: absolute;
+    left: 35%;
+    transform: translate(-50%, -50%);
+
+}
+
+.last img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 99999;
+    filter: brightness(.2);
+}
+
+footer {
+    height: 4vw;
+    width: 100vw;
+    border-top: 5px solid red;
+    background-color: #000;
+    z-index: 999999;
+    display: grid;
+    position: absolute;
+    bottom: 0%;
+    box-shadow: 1px -5px 150px rgba(255, 0, 0, 0.25);
+}
+
+footer h1 {
+    place-items: center;
+    font-size: 1.5vw;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 10px;
+}

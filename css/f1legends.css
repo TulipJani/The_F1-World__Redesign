@@ -1,0 +1,1144 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: f2;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #000;
+}
+
+@font-face {
+    font-family: f1;
+    src: url(Formula1-Bold.otf);
+}
+
+@font-face {
+    font-family: f2;
+    src: url(Formula1-Regular.otf);
+}
+
+@font-face {
+    font-family: f3;
+    src: url(Formula1-Wide.otf);
+}
+
+@font-face {
+    font-family: Helena;
+    src: url(Helena\ Display.otf);
+}
+
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.main>nav {
+    height: 100px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 50px;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    font-weight: 300;
+}
+
+nav img {
+    height: 30px;
+    object-fit: cover;
+}
+
+nav a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav .active {
+    /* color: red; */
+    transform: scale(1.05);
+    font-weight: 900;
+}
+
+nav a:hover {
+    color: red;
+    transform: scale(1.05);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+#page1>video {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+#page1 .introText {
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding-top: 37.5%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+#page1 .introText h2 {
+    font-size: 5vw;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#page1 .introText h2::before {
+    content: "Meet the F1 Legends";
+    position: absolute;
+    top: 2px;
+    left: 16.25%;
+    -webkit-text-stroke: 10px rgb(255, 0, 0);
+    z-index: -1;
+}
+
+.headlineText {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    /* background-color: #0000ff; */
+}
+
+
+.headlineText h1 {
+    font-size: 10vw;
+    text-align: center;
+    position: relative;
+    font-family: f1;
+    color: #fff;
+}
+
+.headlineText h1::before {
+    content: 'TEAMS';
+    position: absolute;
+    top: 2px;
+    left: 28%;
+    z-index: -99;
+    color: red;
+    -webkit-text-stroke: 10px red;
+}
+
+/* .headlineText h1::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    width: 50%;
+    margin: 0 auto;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #fff;
+} */
+
+.racers-description {
+    width: 100%;
+    height: auto;
+    z-index: 999;
+}
+
+
+
+#page2 {
+    height: 100vh;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page2 #card-container {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container>.redbull {
+    rotate: -90deg;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #fe5b30;
+}
+
+
+#card-container .card {
+    position: relative;
+    width: 50%;
+    height: 40%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page3 #card-container2 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    /* background: url(../assets/teams/mercedes.png); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#page3>.racers-description>#card-container2>.mercedes {
+    rotate: -90deg;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #00a49c;
+
+}
+
+#card-container2 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    border-top-left-radius: 50px;
+    transform: scale(1.05);
+}
+
+.card:hover video {
+    transform: scale(1.25);
+}
+
+.card__content {
+    position: absolute;
+    top: 95%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.1px);
+    -webkit-backdrop-filter: blur(8.1px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+    position: absolute;
+    top: 80%;
+    left: 0;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.card:hover img {
+    scale: 1.2;
+}
+
+.card__description {
+    font-size: 14px;
+    color: #fff;
+}
+
+#scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+    text-transform: uppercase;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    margin-right: 25px;
+    font-family: "helvetica";
+    color: transparent;
+    -webkit-text-stroke: 2px red;
+    transition: all ease-in-out 0.5;
+}
+
+#scroller h4:hover {
+    color: red;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+#page4 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page4 #card-container3 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container3>.aston {
+    rotate: -90deg;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #007a6c;
+    filter: brightness(2);
+}
+
+
+#card-container3 .card {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page4 #card-container3 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    /* background: url(../assets/teams/mercedes.png); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#card-container3 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+
+}
+
+
+#page5 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page5 #card-container4 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container4>.ferrari {
+    rotate: -90deg;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: red;
+}
+
+
+#card-container4 .card {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page5 #card-container4 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    /* background: url(../assets/teams/mercedes.png); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#card-container4 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+#page6 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page6 #card-container5 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container5>.mclaren {
+    rotate: -90deg;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #ec6e29;
+}
+
+
+#card-container5 .card {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page6 #card-container5 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+#card-container5 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+
+}
+
+
+#page7 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page7 #card-container6 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container6>.haas {
+    rotate: -90deg;
+    width: 75%;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #fff;
+}
+
+
+#card-container6 .card {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page7 #card-container6 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+#card-container6 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+
+}
+
+
+#page8 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page8 #card-container7 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container7>.alfa {
+    rotate: -90deg;
+    width: 75%;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #245e59;
+}
+
+
+#card-container7 .card {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page8 #card-container7 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+#card-container7 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+
+}
+
+#page9 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page9 #card-container8 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container8>.alphaTauri {
+    rotate: -90deg;
+    width: 75%;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #fff;
+}
+
+
+#card-container8 .card {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page9 #card-container8 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+#card-container8 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+
+}
+
+
+#page10 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page10 #card-container9 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container9>.alpine {
+    rotate: -90deg;
+    width: 75%;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #2951b8;
+}
+
+
+#card-container9 .card {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page10 #card-container9 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+#card-container9 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+
+}
+
+#page11 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-family: a;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#page11 #card-container10 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#card-container10>.williams {
+    rotate: -90deg;
+    width: 75%;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-family: f1;
+    color: transparent;
+    font-family: f1;
+    line-height: 1.2;
+    color: #10a2c9;
+}
+
+
+#card-container10 .card {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+
+#page11 #card-container10 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+#card-container10 .card {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 250px 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #00000080;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+
+}
+
+.group {
+    margin-top: 50px;
+    width: 100vw;
+    height: 75%;
+    /* background-color: #333; */
+    z-index: 9999;
+    display: grid;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    position: relative;
+}
+
+
+
+.group img {
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    place-self: center;
+    z-index: 99999;
+    border: 5px solid #fff;
+    box-shadow: -25px 25px 25px #ffffff25;
+    z-index: -1;
+}
+
+.group h1 {
+    width: 100%;
+    margin-left: 50%;
+    margin-top: 4vw;
+    font-size: 10vw;
+    place-self: center;
+    font-family: f1;
+    background: url(../assets/f1.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.group h1::after {
+    content: 'F1 2023';
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px;
+    z-index: -99;
+    -webkit-text-stroke: 5px #fff;
+}
+
+.last {
+    margin-top: 150px;
+    height: 50vh;
+    width: 150vw;
+    /* background-color: #333; */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page7-hr {
+    width: 35%;
+    border: 1px solid red;
+    position: relative;
+    left: 50%;
+}
+
+.last h1 {
+    font-size: 5vw;
+    z-index: 99999999;
+    position: absolute;
+    left: 35%;
+    transform: translate(-50%, -50%);
+
+}
+
+.last img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 99999;
+    filter: brightness(.2);
+}
+
+footer {
+    height: 4vw;
+    width: 100vw;
+    border-top: 5px solid red;
+    background-color: #000;
+    z-index: 999999;
+    display: grid;
+    position: absolute;
+    bottom: 0%;
+    box-shadow: 1px -5px 100px rgba(255, 0, 0, 0.5);
+}
+
+footer h1 {
+    place-items: center;
+    font-size: 1.5vw;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 10px;
+}
