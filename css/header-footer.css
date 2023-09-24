@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: f2;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #000;
+}
+
+@font-face {
+    font-family: f1;
+    src: url(Formula1-Bold.otf);
+}
+
+@font-face {
+    font-family: f2;
+    src: url(Formula1-Regular.otf);
+}
+
+@font-face {
+    font-family: f3;
+    src: url(Formula1-Wide.otf);
+}
+
+@font-face {
+    font-family: Helena;
+    src: url(Helena\ Display.otf);
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: auto;
+}
+
+.main>#nav {
+    height: 100px;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 0vw;
+    padding: 1vw 0;
+    padding-left: 2vw;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    font-weight: 300;
+}
+
+
+#nav img {
+    width: 10vmax;
+    object-fit: cover;
+}
+
+#nav .links {
+    height: 100%;
+    width: 100vw;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+
+}
+
+#nav .links a {
+    font-size: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#nav .active {
+    /* color: red; */
+    transform: scale(1.05);
+    font-weight: 900;
+}
+
+#nav a:hover {
+    color: red;
+    transform: scale(1.05);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer {
+    height: 4vw;
+    width: 100vw;
+    border-top: 5px solid red;
+    background-color: #000;
+    z-index: 999999;
+    display: grid;
+    position: absolute;
+    bottom: 0%;
+    box-shadow: 1px -5px 100px rgba(255, 0, 0, 0.5);
+}
+
+footer h1 {
+    place-items: center;
+    font-size: 1.5vw;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .main>#nav {
+        height: 10vh;
+        flex-direction: column;
+        padding: 0 1vw;
+        padding-top: 5vw;
+        gap: 1vw;
+    }
+
+    #nav .links a {
+        text-align: center;
+        font-size: 50%;
+    }
+
+    #nav .links {
+        gap: 4vw;
+    }
+
+    #page1 {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        margin-bottom: 150px;
+    }
+
+    #page1 .introText {
+        position: absolute;
+        top: 10%;
+    }
+
+    #page2 {
+        width: 100vw;
+        height: 75vh;
+        position: relative;
+    }
+
+    footer {
+        height: 10vw;
+        width: 100vw;
+        border-top: 1px solid red;
+        background-color: #000;
+        z-index: 999999;
+        display: grid;
+        position: absolute;
+        bottom: 0%;
+        box-shadow: 1px -5px 150px rgba(255, 0, 0, 0.25);
+    }
+
+    footer h1 {
+        place-items: center;
+        font-size: 1.5vw;
+        color: #fff;
+        text-align: center;
+        font-weight: 900;
+        padding-top: 10px;
+    }
+}
